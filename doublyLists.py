@@ -56,6 +56,14 @@ class Lists:
     #     find_last.next = new_node
     #     new_node.prev = find_last
 
+    def search_list(self, data):
+        find_data = self.head
+        while(find_data):
+            if find_data.mobile_number == data:
+                print('Contact found: {} {} {}'.format(find_data.first_name,find_data.last_name,find_data.mobile_number))
+                return
+        print('Record not found.')
+
     def print_list(self):
         node = self.head
         while(node):

@@ -20,7 +20,11 @@ def Add_new_Contact():
 
 def Display_Contacts():
     print("-----Current Contacts-----")
-    list = llist.print_list()
+    llist.print_list()
+
+def Search_for_Contact():
+    user_input = input('Search by mobile number: ')
+    llist.search_list(user_input)
 
 def Exit():
     print("existing..")
@@ -30,7 +34,7 @@ def menu():
     switch={
         '0':Display_Contacts,
         '1':Add_new_Contact,
-        '2':'Find Contact by name',
+        '2':Search_for_Contact,
         '3':'Delete Contact',
         '4':'Update Contact',
         '5':Exit
@@ -38,7 +42,7 @@ def menu():
 
     while(True):
         print('-------Phonebook menu-------')
-        print('0: Display Contacts\n1: Add New Contact\n5:Exit')
+        print('0: Display Contacts\n1: Add New Contact\n2:Search for Contact\n5:Exit')
         user_input = input('Enter: ')
         switch[user_input]()
 
