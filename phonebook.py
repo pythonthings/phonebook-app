@@ -7,7 +7,9 @@ Current working Functions
 - Search for existing contact by mobile mobile_number
 - delete a contact by mobile_number
 - exit
+----
 
+need to implement tests
 '''
 
 

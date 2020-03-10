@@ -95,8 +95,3 @@ class Lists:
             #used to get the last node to print in reversed order
             find_last = node
             node = node.next
-        # print('Reversed order: ')
-        # #uses the last node from in order iteration to point from tail using the prev pointer all the way to the head
-        # while(find_last):
-        #     print(find_last.mobile_number)
-        #     find_last = find_last.prev
