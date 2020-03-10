@@ -26,8 +26,12 @@ def Search_for_Contact():
     user_input = input('Search by mobile number: ')
     llist.search_list(user_input)
 
+def Delete_Contact():
+    user_input = input('Enter number to delete: ')
+    llist.delete_node(user_input)
+
 def Exit():
-    print("existing..")
+    print("exiting..")
     exit()
 
 def menu():
@@ -35,14 +39,14 @@ def menu():
         '0':Display_Contacts,
         '1':Add_new_Contact,
         '2':Search_for_Contact,
-        '3':'Delete Contact',
+        '3':Delete_Contact,
         '4':'Update Contact',
         '5':Exit
     }
 
     while(True):
         print('-------Phonebook menu-------')
-        print('0: Display Contacts\n1: Add New Contact\n2:Search for Contact\n5:Exit')
+        print('0: Display Contacts\n1: Add New Contact\n2:Search for Contact\n3:Delete a Contact\n5:Exit')
         user_input = input('Enter: ')
         switch[user_input]()
 
