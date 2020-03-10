@@ -69,6 +69,7 @@ class Lists:
 
     def delete_node(self, data):
         find_data = self.head
+        #if the node to be deleted is the head
         if self.head.mobile_number == data:
             self.head = find_data.next
             return
@@ -76,10 +77,12 @@ class Lists:
         while(find_data):
             if find_data.mobile_number == data:
                 print('Contact found: {} {} {}'.format(find_data.first_name,find_data.last_name,find_data.mobile_number))
-                print('searchin {} {}'.format(find_data.prev.mobile_number,find_data.next.mobile_number))
-                temp_node = find_data.next
-                temp_node = find_data.prev
-                find_data.prev = temp_node
+                #Remove the ndoe that is not the tail
+                if find_data.next is not None:
+                    find_data.next.prev = find_data.prev
+                #change previous if node to be deleted is not the first node
+                if find_data.prev is not None:
+                    find_data.prev.next = find_data.next
                 return
             find_data = find_data.next
         print('Record not found.')

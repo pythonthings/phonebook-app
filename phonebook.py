@@ -4,6 +4,8 @@ Phonebook app using doubly linked lists.
 Current working Functions
 - display
 - add new contact
+- Search for existing contact by mobile mobile_number
+- delete a contact by mobile_number
 - exit
 
 '''
@@ -34,6 +36,15 @@ def Exit():
     print("exiting..")
     exit()
 
+def test_flow():
+    llist.push('11111111','another first','another last')
+    llist.push('7143427492','someones first','someines last')
+    llist.push('23213123213','first name','last name')
+    llist.push('0000000','sdfsdf','sfsdf')
+    llist.print_list()
+    llist.delete_node('23213123213')
+    llist.print_list()
+
 def menu():
     switch={
         '0':Display_Contacts,
@@ -52,6 +63,8 @@ def menu():
 
 def main():
     menu()
+    test_flow()
+
 
 if __name__ == '__main__':
     llist = Lists()
