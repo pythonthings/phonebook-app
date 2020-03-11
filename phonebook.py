@@ -24,7 +24,8 @@ def Add_new_Contact():
 
 def Display_Contacts():
     print("-----Current Contacts-----")
-    llist.print_list()
+    total_contacts = llist.print_list()
+    return total_contacts
 
 def Search_for_Contact():
     user_input = input('Search by mobile number: ')
@@ -40,7 +41,7 @@ def Exit():
 
 def test_flow():
     llist.push('11111111','another first','another last')
-    llist.push('7143427492','someones first','someines last')
+    llist.push('7141234567','someones first','someines last')
     llist.push('23213123213','first name','last name')
     llist.push('0000000','sdfsdf','sfsdf')
     llist.print_list()

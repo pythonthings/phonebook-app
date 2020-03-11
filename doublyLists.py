@@ -89,9 +89,12 @@ class Lists:
 
 
     def print_list(self):
+        count = 0
         node = self.head
         while(node):
+            count+=1
             print('{} {} {}'.format(node.first_name,node.last_name,node.mobile_number))
             #used to get the last node to print in reversed order
             find_last = node
             node = node.next
+        return count
